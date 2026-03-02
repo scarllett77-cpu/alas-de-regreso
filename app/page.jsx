@@ -1,5 +1,5 @@
+'use client';
 import React, { useState, useEffect } from 'react';
-import { createRoot } from 'react-dom/client';
 import { 
   Plane, ShieldCheck, LayoutDashboard, Users, MapPin, TrendingUp, 
   Bell, ChevronRight, Cpu, Eye, Gem, CheckCircle2, AlertCircle, 
@@ -214,8 +214,6 @@ const App = () => {
 
 const container = document.getElementById('root');
 if (container) {
-  const root = createRoot(container);
-  root.render(<App />);
 }
 
 export default App;
