@@ -4,53 +4,36 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 56, 81; /* Azul Bahía Profundo */
-  --background-end-rgb: 2, 4, 8;    /* Negro Abisal */
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  background: radial-gradient(
-    circle at top,
-    rgb(var(--background-start-rgb)) 0%,
-    rgb(var(--background-end-rgb)) 100%
-  );
-  color: rgb(var(--foreground-rgb));
+  margin: 0;
+  padding: 0;
+  background-color: #020408; /* Color de respaldo */
+  color: white;
   min-height: 100vh;
 }
 
-/* Animación suave para la entrada de la poesía */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* LA CAPA DE INMERSIÓN */
+.bg-plenitud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Se queda atrás de todo */
+  background-image: linear-gradient(to bottom, rgba(2, 4, 8, 0.5), rgba(2, 4, 8, 0.8)), url('/fondo-plenitud.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.7) contrast(1.1); /* Ajuste para que el texto resalte */
 }
 
 .animate-fade-in {
-  animation: fadeIn 1.5s ease-out forwards;
+  animation: fadeIn 2s ease-out forwards;
 }
 
-/* Estilo para que el scroll sea elegante y no rompa la estética de cristal */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #020408;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #f59e0b; /* Color Oro */
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #fbbf24;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
