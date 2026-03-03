@@ -1,11 +1,5 @@
 {
-  "version": 2,
-  "cleanUrls": true,
-  "framework": "vite",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+  "framework": "nextjs",
+  "buildCommand": "next build",
+  "outputDirectory": ".next"
 }
