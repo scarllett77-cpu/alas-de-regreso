@@ -1,7 +1,4 @@
-export const metadata = {
-  title: 'Alas de Regreso RD',
-  description: 'Tecnología como estructura para la humanidad',
-}
+import './globals.css'
 
 export default function RootLayout({ children }) {
   return (
