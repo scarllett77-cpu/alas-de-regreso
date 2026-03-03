@@ -1,39 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 255, 255, 255;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #020408; /* Color de respaldo */
-  color: white;
-  min-height: 100vh;
-}
-
-/* LA CAPA DE INMERSIÓN */
+/* Busca esta parte en tu archivo globals.css */
 .bg-plenitud {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Se queda atrás de todo */
-  background-image: linear-gradient(to bottom, rgba(2, 4, 8, 0.5), rgba(2, 4, 8, 0.8)), url('/fondo-plenitud.jpg');
+  z-index: -1;
+  /* CAMBIA ESTA LÍNEA PARA QUE COINCIDA CON EL NOMBRE NUEVO */
+  background-image: linear-gradient(to bottom, rgba(2, 4, 8, 0.4), rgba(2, 4, 8, 0.7)), url('/fondo.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: brightness(0.7) contrast(1.1); /* Ajuste para que el texto resalte */
-}
-
-.animate-fade-in {
-  animation: fadeIn 2s ease-out forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  filter: brightness(0.6) contrast(1.2); 
 }
