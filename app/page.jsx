@@ -5,20 +5,20 @@ export default function Home() {
   return (
     <div className="relative min-h-screen w-full bg-black text-white font-sans overflow-x-hidden">
       
-      {/* CAPA 1: EL FONDO (Única y fija) */}
+      {/* FONDO DE PORTADA */}
       <div 
         className="fixed inset-0 z-0"
         style={{
-          backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('/portada.jpg')",
+          backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('/portada.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}
       />
 
-      {/* CAPA 2: EL CONTENIDO (Flotando sobre el fondo) */}
+      {/* CONTENIDO PRINCIPAL */}
       <div className="relative z-10">
-        <nav className="p-8 flex justify-between items-center bg-black/20 backdrop-blur-md border-b border-white/5">
+        <nav className="p-8 flex justify-between items-center bg-black/40 backdrop-blur-md border-b border-white/5">
           <div className="flex items-center gap-4">
             <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
             <span className="text-[10px] tracking-[0.8em] uppercase font-bold text-gray-200">Alas de Regreso</span>
@@ -39,8 +39,8 @@ export default function Home() {
               </p>
             </section>
 
-            <section className="p-10 md:p-16 bg-black/60 border border-white/10 rounded-2xl backdrop-blur-xl space-y-8">
-              <div className="flex items-center gap-3 text-amber-500/80 uppercase text-[10px] tracking-widest font-bold">
+            <section className="p-10 md:p-16 bg-black/70 border border-white/10 rounded-2xl backdrop-blur-xl space-y-8">
+              <div className="flex items-center gap-3 text-amber-500 uppercase text-[10px] tracking-widest font-bold">
                 <Sparkles size={14} /> El Puente de Cristal
               </div>
               <p className="text-xl text-gray-200 font-light leading-relaxed">
@@ -51,11 +51,12 @@ export default function Home() {
               </button>
             </section>
 
-            <div className="text-center opacity-30">
+            {/* ECUACIÓN EN TEXTO PLANO PARA EVITAR ERRORES */}
+            <div className="text-center opacity-40">
               <div className="text-xl font-serif italic mb-2">
-                $B_a = \frac{A_c + (V_i \times E_p)}{R_v}$
+                Ba = (Ac + Vi * Ep) / Rv
               </div>
-              <p className="text-[8px] tracking-[0.4em] uppercase">ADN Digital • Estructura de Vuelo</p>
+              <p className="text-[8px] tracking-[0.4em] uppercase text-gray-500">ADN Digital • Estructura de Vuelo</p>
             </div>
           </div>
         </main>
